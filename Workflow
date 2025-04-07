@@ -1,0 +1,34 @@
+            +---------------------+
+            |   Shodan API Scan   |
+            |  (nginx, apache…)   |
+            +---------------------+
+                       ↓
+              Extract IP, Port, Service
+                       ↓
+            +---------------------+
+            |   Nmap (optional)   |
+            |   Banner Grabbing   |
+            +---------------------+
+                       ↓
+                List of Targets
+                       ↓
+     +----------------+----------------+----------------+
+     |                |                |                |
+     v                v                v                v
+AbuseIPDB       VirusTotal       CVE Mapping     MITRE Mapping
+ (IP Rep)       (Intel Check)     (Vuln Data)    (Exploit Path)
+     |                |                |                |
+     +----------------+----------------+----------------+
+                       ↓
+               Feature Extraction
+          (CVSS, Ports, Abuse, CVEs…)
+                       ↓
+                ML Risk Classifier
+         (Trained RandomForest Model)
+                       ↓
+                Final Risk Levels
+                       ↓
+          +---------------------------+
+          |   Streamlit Dashboard     |
+          |   + PDF / JSON Reports    |
+          +---------------------------+
